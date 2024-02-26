@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { FC, HTMLAttributes } from "react";
 
 type TBorder = "border-2";
 type TColor = "text-white" | "text-black";
-interface Props {
+interface Props extends HTMLAttributes<HTMLParagraphElement>{
   border?: TBorder;
-  color: TColor;
+  color?: TColor;
 }
 
 export const Paragraph: FC<Props> = function Paragraph(props) {

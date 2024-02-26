@@ -1,13 +1,13 @@
-import { FC } from "react";
+import { FC, HTMLAttributes } from "react";
 
 type TTextSize = "text-base" | "text-lg" | "text-xl";
 type TBorder = "border-8" | "border-4" | "border-2";
 type TColor = "text-white" | "text-black";
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLHeadingElement> {
   textSize?: TTextSize;
   border?: TBorder;
-  color: TColor;
+  color?: TColor;
 }
 
 export const Title: FC<Props> = function Title(props) {
